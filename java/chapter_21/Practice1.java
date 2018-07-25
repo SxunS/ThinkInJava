@@ -14,20 +14,3 @@ public class Practice1 {
     }
 }
 
-class MyThread implements Runnable{
-    public MyThread(){
-        System.out.println(this + "MyThread的构造方法正在被调用");
-    }
-    @Override
-    public void run() {
-        doSomething();
-        doSomething();
-        doSomething();
-        System.out.println(this + "run方法即将结束");
-    }
-
-    private void doSomething() {
-        System.out.println(this + "正在打印消息");
-        Thread.yield();
-    }
-}
